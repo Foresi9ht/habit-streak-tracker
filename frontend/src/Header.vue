@@ -13,7 +13,7 @@
           <li><a href="#">HOME</a></li>
           <li><a href="#">CHART</a></li>
           <li><a href="#">SETTINGS</a></li>
-          <li><router-link to="/register">Log In</router-link></li>
+          <li><router-link to="/register">Log in</router-link></li>
           <li><router-link to="/register">REGISTER</router-link></li>
         </ul>
       </div>
@@ -116,7 +116,7 @@ ul.second-menu > li:first-child > a::after {
   position: absolute;
   width: 7px;
   height: 7px;
-  background-color: #ff3c00;
+  background-color: #3b82f6;
   border-radius: 50%;
   left: 74px;
   top: 14px;

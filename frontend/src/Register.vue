@@ -103,7 +103,7 @@ ul.second-menu > li:first-child > a::after {
   position: absolute;
   width: 7px;
   height: 7px;
-  background-color: #ff3c00;
+  background-color: #3b82f6;
   border-radius: 50%;
   left: 64px;
   top: 14px;
@@ -491,7 +491,7 @@ nav.nav-mobile {
 }
 
 .login .form-container > form > input[type="submit"] {
-  background-color: #ff501a;
+  background-color: #3b82f6;
   width: 136px;
   text-align: center;
   margin: auto;

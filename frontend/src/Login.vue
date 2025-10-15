@@ -46,7 +46,7 @@
 }
 
 .login .form-container > form > input[type="submit"] {
-  background-color: #ff501a;
+  background-color: #3b82f6;
   width: 136px;
   text-align: center;
   margin: auto;
