@@ -50,18 +50,12 @@ a {
   text-decoration: none;
 }
 
-img {
-  width: 100%;
-  height: 100%;
-}
-
 .default-container {
   max-width: 1716px;
   margin: auto;
 }
 
 header {
-  /* background-color: green; */
   position: sticky;
   top: 0;
   z-index: 3;

@@ -407,21 +407,13 @@ onMounted(() => {
   padding: 24px;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
     "Helvetica Neue", Arial;
-  position: relative; /* Added for theme container positioning */
+  position: relative;
 }
 
 .hero {
   background-color: white;
   text-align: center;
   margin-bottom: 24px;
-  position: relative;
-}
-
-.header-top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
   position: relative;
 }
 
@@ -523,9 +515,9 @@ onMounted(() => {
 .habit-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  padding: 50px 0 50px 160px;
-  max-width: 400px;
-  margin: 0 auto;
+  padding: 0 0 50px 220px;
+  max-width: 500px;
+  margin: auto;
   grid-gap: 1rem;
 }
 
@@ -539,9 +531,9 @@ onMounted(() => {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  background-color: var(--primary);
-  border: 6px solid var(--secondary);
-  color: var(--secondary);
+  background-color: white;
+  border: 6px solid #125dc8;
+  color: #125dc8;
   display: grid;
   place-items: center;
   cursor: pointer;
@@ -549,16 +541,16 @@ onMounted(() => {
 }
 
 .habit-btn:hover {
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .icon:hover {
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .habit-btn.completed {
-  background-color: var(--secondary);
-  color: var(--primary);
+  background-color: #125dc8;
+  color: #000000ff;
 }
 
 .habit-btn svg {
@@ -582,14 +574,15 @@ onMounted(() => {
 .new-habit__add {
   width: 3rem;
   height: 3rem;
-  border-radius: 50%;
-  background-color: var(--secondary);
-  color: var(--primary);
+  border-radius: 100px;
+  background-color: #125dc8;
+  color: white;
   display: grid;
   place-items: center;
   transition: all 300ms ease-in-out;
   cursor: pointer;
   border: none;
+  margin: 18px 0 0 0;
 }
 
 .modal-container {
@@ -693,8 +686,8 @@ onMounted(() => {
 }
 
 .modal-btns button:hover {
-  color: var(--primary);
-  background-color: var(--secondary);
+  color: #000000ff;
+  background-color: #125dc8;
 }
 
 .theme-container {
@@ -707,9 +700,9 @@ onMounted(() => {
 .theme {
   width: 50px;
   height: 24px;
-  background-color: var(--secondary);
   border-radius: 12px;
   position: relative;
+  background-color: #3b82f6;
   cursor: pointer;
   border: none;
   padding: 0;
@@ -720,7 +713,7 @@ onMounted(() => {
   position: absolute;
   width: 20px;
   height: 20px;
-  background-color: var(--primary);
+  background-color: white;
   border-radius: 50%;
   top: 2px;
   left: 2px;
@@ -752,8 +745,12 @@ onMounted(() => {
   color: #e5e7eb;
 }
 
+:root.dark #app {
+  background-color: black;
+}
+
 :root.dark .stat__label {
-  color: #9ca3af;
+  color: white;
 }
 
 :root.dark .achv {

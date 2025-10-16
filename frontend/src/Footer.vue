@@ -2,23 +2,33 @@
   <footer>
     <div class="footer-wrapper default-container">
       <div class="f-item">
-        <p>Main links</p>
+        <p>Habit Streak Tracker</p>
         <ul>
-          <li>Hello World!</li>
-          <li>Hello World!</li>
-          <li>Hello World!</li>
+          <li>
+            HabiTrack helps you build positive<br />
+            habits and stay consistent every day.<br />
+            Set goals, track your progress, and stay<br />
+            motivated to live a healthier and more productive life.
+          </li>
         </ul>
       </div>
       <div class="f-item">
-        <p>Other links</p>
+        <p>About Us</p>
         <ul>
-          <li>About US</li>
+          <li>
+            We did a lot of things to create this<br />
+            project. We faced a lot of problems,<br />
+            and we will finish it until we get 10/10!
+          </li>
         </ul>
       </div>
       <div class="f-item">
-        <p>HabotStreakTracker</p>
+        <p>HabitStreakTracker</p>
         <ul>
-          <li>Our Project</li>
+          <li>
+            Ayanbek Sultanbek<br />
+            Aizat Kenges
+          </li>
         </ul>
       </div>
     </div>
@@ -26,19 +36,19 @@
     <div class="footer-social default-container">
       <p>Follow us via social media:</p>
       <a href="#">
-        <img src="#" alt="social" />
+        <img src="/img/icons/facebook.svg" alt="social" />
       </a>
       <a href="#">
-        <img src="#" alt="social" />
+        <img src="/img/icons/instagramm.svg" alt="social" />
       </a>
       <a href="#">
-        <img src="#" alt="social" />
+        <img src="/img/icons/telegramm.svg" alt="social" />
       </a>
       <a href="#">
-        <img src="#" alt="social" />
+        <img src="/img/icons/youtube.svg" alt="social" />
       </a>
       <a href="#">
-        <img src="#" alt="social" />
+        <img src="/img/icons/vk.svg" alt="social" />
       </a>
     </div>
 
@@ -70,11 +80,6 @@ ul {
 a {
   color: white;
   text-decoration: none;
-}
-
-img {
-  width: 100%;
-  height: 100%;
 }
 
 .default-container {
@@ -304,7 +309,7 @@ button {
 
 footer {
   padding: 20px 0 0 0;
-  margin-top: 257px;
+  margin-top: 80px;
   background-color: #0c0b0b;
   color: white;
 }
