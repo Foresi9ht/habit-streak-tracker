@@ -2,11 +2,14 @@
   <section class="login">
     <div class="form-container">
       <p>Log In</p>
-      <form action="#">
+      <form @submit.prevent="loginUser">
+        >
         <label for="email">Email</label>
-        <input type="email" name="email" />
+        <input type="email" v-model="email" required />
+        <p v-if="emailError" class="error">{{ emailError }}</p>
         <label for="password">Password</label>
-        <input type="password" name="password" />
+        <input type="password" v-model="password" required minlength="6" />
+        <p v-if="passwordError" class="error">{{ passwordError }}</p>
         <input type="submit" value="Log In" />
       </form>
       <p>or <span>Forgot Password</span></p>
@@ -88,6 +91,14 @@ export default {
   methods: {
     loginUser() {
       console.log("Logging in:", this.email, this.password);
+    },
+  },
+  computed: {
+    emailError() {
+      return this.email.includes("@") ? null : "Invalid email";
+    },
+    passwordError() {
+      return this.password.length >= 6 ? null : "Password too short";
     },
   },
 };

@@ -47,8 +47,8 @@ defineEmits([
     </div>
   </section>
 
-  <!-- Modal -->
-  <div class="modal-container" :class="{ active: modalVisible }">
+  <!-- Modal - Using v-show -->
+  <div class="modal-container" v-show="modalVisible">
     <div class="modal">
       <h2>Add a new habit</h2>
 
@@ -79,14 +79,6 @@ defineEmits([
 </template>
 
 <style scoped>
-/* Your existing Vue styles remain the same */
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
-
-body {
-  font-family: "Oswald", sans-serif;
-  overflow-x: hidden;
-}
-
 .habit-tracker {
   margin-top: 28px;
   position: relative;
@@ -174,15 +166,8 @@ body {
   display: grid;
   place-items: center;
   backdrop-filter: blur(10px);
-  opacity: 0;
-  pointer-events: none;
-  z-index: 4;
-  transition: all 300ms ease-in-out;
-}
-
-.modal-container.active {
-  opacity: 1;
-  pointer-events: all;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 }
 
 .modal {
@@ -190,13 +175,21 @@ body {
   padding: 2rem;
   background-color: var(--primary);
   box-shadow: 1px 4px 30px 10px var(--shadow);
-  transform: translateY(30%);
-  transition: all 300ms ease-in;
   border-radius: 12px;
+  min-width: 300px;
+  max-width: 90%;
+  animation: modalFadeIn 0.3s ease-out;
 }
 
-.modal-container.active .modal {
-  transform: translateY(0);
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .modal h2 {
@@ -266,7 +259,20 @@ body {
 }
 
 .modal-btns button:hover {
-  color: #000000ff;
+  color: white;
   background-color: #125dc8;
+}
+:root {
+  --primary: #ffffff;
+  --secondary: #125dc8;
+  --light: #f4f5f5;
+  --shadow: rgba(8, 47, 102, 0.12);
+}
+
+:root.dark {
+  --primary: #1a1a1a;
+  --secondary: #3b82f6;
+  --light: #2d3748;
+  --shadow: rgba(0, 0, 0, 0.3);
 }
 </style>

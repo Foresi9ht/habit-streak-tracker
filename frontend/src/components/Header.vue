@@ -13,7 +13,7 @@
           <li><a href="#">HOME</a></li>
           <li><a href="#">CHART</a></li>
           <li><a href="#">SETTINGS</a></li>
-          <li><router-link to="/register">Log in</router-link></li>
+          <li><router-link to="/login">Log in</router-link></li>
           <li><router-link to="/register">REGISTER</router-link></li>
         </ul>
       </div>
@@ -29,6 +29,8 @@
 
 header {
   background-color: black;
+
+  padding: 10px 5px 10px 5px;
 }
 
 body {
@@ -64,7 +66,8 @@ header {
 header .header-nav {
   display: flex;
   height: 56px;
-  padding: 8px 0 0 0;
+  padding: 0px 0 0 0;
+  margin: 10px;
 }
 
 header .header-nav ul {

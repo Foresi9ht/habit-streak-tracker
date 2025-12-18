@@ -175,16 +175,6 @@ ul.second-menu > li:first-child > a::after {
   padding-bottom: 26px;
 }
 
-button {
-  width: 209px;
-  height: 57px;
-  font-size: 20px;
-  background-color: #ff501a;
-  color: white;
-  border: solid 0px;
-  cursor: pointer;
-}
-
 .next-main-slider-dots {
   display: flex;
   justify-content: flex-end;

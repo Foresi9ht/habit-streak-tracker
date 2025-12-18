@@ -1,4 +1,9 @@
 <script setup>
+import { onUnmounted } from "vue";
+
+onUnmounted(() => {
+  console.log("HabitQuest destroyed");
+});
 defineProps({
   points: Number,
   level: Number,
@@ -13,7 +18,6 @@ defineEmits(["toggle-theme"]);
 </script>
 
 <template>
-  <!-- Theme toggle -->
   <div class="theme-container">
     <button
       class="theme"
@@ -24,13 +28,11 @@ defineEmits(["toggle-theme"]);
     </button>
   </div>
 
-  <!-- Hero -->
   <div class="hero">
     <h1>Habit Quest</h1>
     <p>Track your habits, earn points, unlock achievements</p>
   </div>
 
-  <!-- Stats -->
   <section class="stats">
     <div class="card">
       <div class="stat">
@@ -58,7 +60,6 @@ defineEmits(["toggle-theme"]);
 </template>
 
 <style scoped>
-/* Your existing Vue styles remain the same */
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 
 body {
@@ -115,7 +116,7 @@ body {
 }
 .progress {
   height: 8px;
-  background: #fff;
+  background: black;
   border-radius: 999px;
   overflow: hidden;
   margin-top: 8px;
