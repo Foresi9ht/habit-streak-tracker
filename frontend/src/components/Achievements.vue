@@ -26,7 +26,6 @@ defineProps({
   </section>
 </template>
 <style scoped>
-/* Your existing Vue styles remain the same */
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 
 body {

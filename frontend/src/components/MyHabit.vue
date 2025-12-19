@@ -47,7 +47,6 @@ defineEmits([
     </div>
   </section>
 
-  <!-- Modal - Using v-show -->
   <div class="modal-container" v-show="modalVisible">
     <div class="modal">
       <h2>Add a new habit</h2>
@@ -121,25 +120,26 @@ defineEmits([
 }
 
 .habit-btn.completed {
-  background-color: #125dc8;
-  color: #000000ff;
+  background-color: #ffffffff;
+  color: #ffffffff;
 }
 
 .habit-btn svg {
   pointer-events: none;
-  width: 3rem;
-  height: 3rem;
+  width: 80px;
+  height: 80px;
+  margin: 25px 0 0 25px;
 }
 
 .habit-name {
-  margin-top: 0.5rem;
+  margin-top: 10px;
   font-weight: 600;
   font-size: 0.9rem;
 }
 
 .habit-streak {
   font-size: 0.8rem;
-  color: #6b7280;
+  color: #ffffffff;
   margin-top: 0.25rem;
 }
 
@@ -181,6 +181,12 @@ defineEmits([
   animation: modalFadeIn 0.3s ease-out;
 }
 
+.modal svg {
+  width: 100px;
+  height: 100px;
+  margin: 20px 0 0 18px;
+}
+
 @keyframes modalFadeIn {
   from {
     opacity: 0;
@@ -196,12 +202,13 @@ defineEmits([
   text-align: center;
   margin-bottom: 1rem;
   justify-content: center;
+  color: white;
 }
 
 .modal input {
   font-size: inherit;
   font-family: inherit;
-  color: inherit;
+  color: white;
   background-color: var(--light);
   padding: 0.5rem;
   width: 100%;
@@ -270,7 +277,7 @@ defineEmits([
 }
 
 :root.dark {
-  --primary: #1a1a1a;
+  --primary: #f6f6f6ff;
   --secondary: #3b82f6;
   --light: #2d3748;
   --shadow: rgba(0, 0, 0, 0.3);

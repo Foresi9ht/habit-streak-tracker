@@ -1,6 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-
-// ✅ Lazy-loaded components (dynamic import)
 const Login = () => import("../components/Login.vue");
 const Register = () => import("../components/Register.vue");
 const MyHabit = () => import("../components/MyHabit.vue");
@@ -24,11 +22,12 @@ const routes = [
     path: "/habits",
     component: MyHabit,
     meta: { requiresAuth: true },
-  },
-  {
-    path: "/habits/:id",
-    component: HabitDetails,
-    meta: { requiresAuth: true },
+    children: [
+      {
+        path: ":id",
+        component: HabitDetails,
+      },
+    ],
   },
   {
     path: "/:pathMatch(.*)*",
@@ -41,7 +40,6 @@ const router = createRouter({
   routes,
 });
 
-// ✅ Navigation Guard (у тебя уже был — оставляем)
 router.beforeEach((to, from, next) => {
   const loggedIn = localStorage.getItem("userToken");
   if (to.meta.requiresAuth && !loggedIn) {

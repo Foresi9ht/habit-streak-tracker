@@ -8,7 +8,7 @@
         <label for="password">Password</label>
         <input type="password" v-model="form.password" minlength="6" />
         <label for="repeat_password">Repeat Password</label>
-        <input type="password" v-model="form.repeat" />
+        <input type="password" name="repeat_password" />
         <input type="submit" value="Register" />
       </form>
       <p>or <span>Log In</span></p>
@@ -60,16 +60,16 @@
 .login .form-container > p:last-child {
   text-align: center;
   font-size: 15px;
-  color: #747474;
+  color: #ffffffff;
 }
 
 .login .form-container > p:last-child > span {
-  color: #c1c1c1;
+  color: #ffffffff;
 }
 
 .login > p {
   font-size: 15px;
-  color: #747474;
+  color: #ffffffff;
   margin-top: 20px;
 }
 

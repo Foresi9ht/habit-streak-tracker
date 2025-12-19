@@ -3,12 +3,10 @@ import { ref, computed, watch } from "vue";
 const STORAGE_KEY = "habitQuest.v1";
 
 export function useHabits() {
-  // --- STATE ---
   const state = ref(
     load() ?? { habits: [], points: 0, createdAt: new Date().toISOString() }
   );
 
-  // --- HELPERS ---
   const todayStr = () => new Date().toISOString().slice(0, 10);
   const dateToStr = (d) => d.toISOString().slice(0, 10);
   const isToday = (iso) => iso === todayStr();
@@ -18,7 +16,6 @@ export function useHabits() {
     return iso === dateToStr(d);
   };
 
-  // --- LOCALSTORAGE ---
   function load() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
@@ -39,7 +36,6 @@ export function useHabits() {
 
   watch(state, save, { deep: true });
 
-  // --- ACTIONS ---
   function addHabit(name) {
     const trimmed = name.trim();
     if (!trimmed) return;
@@ -67,7 +63,6 @@ export function useHabits() {
     habit.lastChecked = todayStr();
     habit.total += 1;
 
-    // начисление очков
     let gained = 10;
     if (habit.streak === 3) gained += 5;
     if (habit.streak === 7) gained += 10;
@@ -75,7 +70,6 @@ export function useHabits() {
     state.value.points += gained;
   }
 
-  // --- COMPUTED ---
   const circularHabits = computed(() =>
     state.value.habits.map((habit) => ({
       ...habit,

@@ -4,16 +4,16 @@
       <div class="header-nav-elems default-container">
         <ul>
           <li>
-            <a href="#" class="logo">
-              <img src="#" alt="logo" />
-            </a>
+            <router-link to="/" class="logo">
+              <img src="/img/icons/habitlogo.png" alt="logo" />
+            </router-link>
           </li>
         </ul>
         <ul class="second-menu">
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">CHART</a></li>
-          <li><a href="#">SETTINGS</a></li>
-          <li><router-link to="/login">Log in</router-link></li>
+          <li><router-link to="/">HOME</router-link></li>
+          <li><router-link to="/habits">MY HABITS</router-link></li>
+          <li><router-link to="/habits/stats">STATISTICS</router-link></li>
+          <li><router-link to="/login">LOGIN</router-link></li>
           <li><router-link to="/register">REGISTER</router-link></li>
         </ul>
       </div>
@@ -80,6 +80,11 @@ header .header-nav ul {
   display: flex;
   width: 100%;
   justify-content: space-between;
+}
+
+.header-nav-elems img {
+  width: 50px;
+  height: 50px;
 }
 
 ul.second-menu > li > a {

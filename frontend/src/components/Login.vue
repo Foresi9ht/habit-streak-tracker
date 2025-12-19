@@ -62,11 +62,11 @@
 .login .form-container > p:last-child {
   text-align: center;
   font-size: 15px;
-  color: #747474;
+  color: #ffffffff;
 }
 
 .login .form-container > p:last-child > span {
-  color: #c1c1c1;
+  color: #ffffffff;
 }
 
 .login > p {
